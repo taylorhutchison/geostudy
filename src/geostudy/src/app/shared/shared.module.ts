@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { MultiChoiceQuestionComponent } from './components/multi-choice-question/multi-choice-question.component';
 import { MultiChoiceOptionsComponent } from './components/multi-choice-options/multi-choice-options.component';
+import { HeaderComponent } from './components/header/header.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -10,14 +12,17 @@ import { MultiChoiceOptionsComponent } from './components/multi-choice-options/m
   declarations: [
     NotfoundComponent,
     MultiChoiceQuestionComponent,
-    MultiChoiceOptionsComponent
+    MultiChoiceOptionsComponent,
+    HeaderComponent
   ],
   exports: [
     MultiChoiceQuestionComponent,
-    MultiChoiceOptionsComponent
+    MultiChoiceOptionsComponent,
+    HeaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class SharedModule { }
