@@ -15,7 +15,6 @@ export class InsightsService {
       }
     });
     this.appInsights.loadAppInsights();
-    console.log('hello');
   }
 
   logPageView(name?: string, url?: string) { // option to call manually

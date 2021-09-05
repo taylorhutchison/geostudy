@@ -4,11 +4,15 @@ header {
     background-color:#eaeaea;
     display:flex;
     align-items: center;
-    a {
+    nav {
         display:flex;
         align-items: center;
-        text-decoration: none;
-        color: inherit;
+        a {
+            display:flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
     }
     img {
         height:32px;
@@ -18,4 +22,8 @@ header {
         padding: 0;
         display:inline;
     }
+}
+
+.logolink {
+    margin-right:10px;
 }

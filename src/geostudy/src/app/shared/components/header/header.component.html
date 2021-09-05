@@ -1,9 +1,12 @@
 <header>
-    <nav>
-        <a [routerLink]="'/'">
-            <img src="assets/logo-64.png" />
-            <h1>GeoStudy</h1>
-        </a>
-    </nav>
-
+        <nav>
+            <a [routerLink]="'/'" class="logolink">
+                <img title="Logo" src="assets/logo-64.png" />
+                <h1>GeoStudy</h1>
+            </a>
+            <a *ngFor="let crumb of breadcrumbs; let last = last" [routerLink]="crumb.pathFromRoot">
+                {{crumb.text}}
+                <span *ngIf="!last">&nbsp;&gt;&nbsp;</span>
+            </a>
+        </nav>
 </header>
