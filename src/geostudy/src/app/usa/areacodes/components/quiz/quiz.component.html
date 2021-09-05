@@ -1,0 +1,4 @@
+{{message}}
+<ng-container *ngIf="currentQuestion">
+    <app-multi-choice-question [question]="currentQuestion" (selected)="checkAnswer($event)"></app-multi-choice-question>
+</ng-container>

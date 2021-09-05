@@ -1,0 +1,4 @@
+<ng-container *ngIf="question">
+    <div>{{ question.text }} </div>
+    <app-multi-choice-options [options]="question.options" (selected)="selected.emit($event)"></app-multi-choice-options>
+</ng-container>

@@ -1,0 +1,14 @@
+<label>Select a state: </label>
+<select (change)="stateSelected($event)">
+    <option value="all">All</option>
+    <option *ngFor="let state of allStates" value="{{state.name}}">{{state.name}}</option>
+</select>
+
+<div *ngFor="let state of filteredStates">
+  <h2>{{state.name}}</h2>
+  <ul>
+      <li *ngFor="let areaCode of state.areaCodes">
+          <a target="_blank" href="https://www.allareacodes.com/{{areaCode}}">{{ areaCode }}</a>
+      </li>
+    </ul>
+</div>
